@@ -12,6 +12,8 @@ const Expenses =(props) => {
     setFilteredYear (SelectedYear);
   }
 
+  console.log(props.items);
+
   return (
     <div>
     <Card className="expenses">
@@ -19,6 +21,7 @@ const Expenses =(props) => {
 
       {props.items.map( expense=> 
         <ExpenseItem 
+          id={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
